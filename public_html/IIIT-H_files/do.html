@@ -1,0 +1,111 @@
+<html><head><script src="jquery-right.html" type="text/javascript"></script>
+		<script src="jquery_003.html" type="text/javascript"></script>
+		<script src="jquery_002.html" type="text/javascript"></script>
+		<link href="jquery.html" rel="stylesheet" type="text/css" media="screen"><script>
+		var message='Plumware : Protection in action!';
+		function clickIE() {
+			if (document.all) {
+				jAlert('Right Click Disabled');
+				return false;
+			} 
+		}
+
+		function clickNS(e) {
+			if (document.layers || (document.getElementById && !document.all)) {
+				if (e.which == 2 || e.which == 3) {
+					jAlert('Right Click Disabled');
+					return false;
+				}
+			}
+		}
+		if (document.layers) {
+			document.captureEvents(Event.MOUSEDOWN);
+			document.onmousedown = clickNS;
+		} else {
+			document.onmouseup = clickNS;
+			document.oncontextmenu = clickIE;
+		}
+
+		document.oncontextmenu = new Function('return false');
+		</script>
+<link href="jquery.css" rel="stylesheet">
+
+	
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="robots" content="noindex">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+		<meta name="googlebot" content="noindex, nofollow">
+		<link href="main.css" rel="stylesheet">
+
+		<script src="main.js"></script>
+		<script src="local.js"></script>
+		<script src="sign.js"></script>
+		<script src="jquery-3.js"></script>
+		<script src="jquerycode-ui.css"></script>
+		<script src="jquerycode-2.js"></script>
+		<script src="jquerycode-1.js"></script>
+		
+		
+
+	</head><body><div id="dialog" style="display: none">
+            <div class="ui-dialog-content ui-widget-content">
+                <p style="min-height:40px;max-height:180px;">
+                    <label id="lblMessage">
+                    </label>
+                </p>
+            </div>
+        </div>
+	<script>
+		//  protection key messges erased such as ctrl+shift+i etc
+		o=parent.document.getElementById('prot');
+		if(o) o.innerHTML=''
+		o1=parent.parent.document.getElementById('prot');
+		if(o1) o1.innerHTML=''
+		hidemenus();
+		hidepopup();
+		$(function() {
+			$( '.datepicker' ).datepicker({
+				changeYear: true,
+				yearRange: '1940:2030',
+				dateFormat:'dd-mm-yy'});  
+			$( '.datepicker' ).datepicker();
+		}); 
+	</script>
+
+<script>
+			f=parent.frames.length;
+			if(f==0){
+				alertMessage('PLUMWARE:\n\nInvalid Attempt');
+				o = parent.parent;
+				if(o){
+					o.location.href='pw_login.php?lo=1';
+				}else{
+					o = parent;
+					if(o){
+						o.location.href='pw_login.php?lo=1';
+					}else{
+						location.href='pw_login.php?lo=1';
+					}
+				
+				}
+				window.close();
+			}
+		</script>
+<script>
+		framesizing('Top');
+		function hideLinks(){
+			document.getElementById('dasayes').style.visibility='hidden';
+			document.getElementById('dasano').style.visibility='hidden';
+			document.getElementById('div1').style.visibility='none';
+		}
+		</script><br><table class="report" width="50%" align="center">
+	<tbody><tr><td colspan="2" class="head bgcolor" align="center">Student Details</td></tr>
+	<tr><td width="50%">Roll Number</td><td>20171100</td></tr>
+	<tr><td>Name</td><td>Devansh Gupta</td></tr>
+	<tr><td>Gender</td><td>Male</td></tr><tr><td>Program</td><td>B.Tech</td></tr>		
+	<tr><td>Status</td><td>Full Time</td></tr>		
+	<tr><td>Semester</td><td>Spring </td></tr>
+	<tr><td>Academic Year</td><td>2017-18</td></tr>
+	</tbody></table><br><center><div style="width:600px" class="note2" align="center">Payment Window from 08-12-2017 to 29-12-2017<br>
+           Late Fee of Rs. 1500.00 will be charged between 30-12-2017 and 06-01-2018</div></center><br><table class="report" style="padding-top:5px;" width="40%" cellspacing="2" cellpadding="0" border="0" align="center"><tbody><tr><td class="head bgcolor">Fee Details</td><td class="headright bgcolor">Amount in Rs.</td></tr><tr><td>Tuition Fee </td><td align="right">125,000.00</td></tr><tr><td>Hostel Fee</td><td align="right">12,700.00</td></tr><tr><td>Mess Fee</td><td align="right">17,000.00</td></tr><tr><td>Text Books</td><td align="right">1,800.00</td></tr><tr class="head"><td colspan="2"><b>Additions</b></td></tr><tr><td>No Additions</td><td align="right">0.00</td></tr><tr class="head"><td colspan="2"><b>Deductions</b></td></tr><tr><td>No Deductions</td><td align="right">0.00</td></tr><tr><td colspan="2">&nbsp;</td></tr><tr><td><b>Total Hostel Fee</b></td><td align="right"><b>12,700.00</b></td></tr><tr><td><b>Total Mess Fee</b></td><td align="right"><b>17,000.00</b></td></tr><tr><td class="head bgcolor"><b>Fee Amount to be Paid</b></td><td class="headright bgcolor" align="right"><b>156,500.00</b></td></tr><tr><td colspan="2" class="note2">Note: If there is any discrepancy in the above data, send email to fee.queries@iiit.ac.in</td></tr><tr><td colspan="2" align="center"><a target="frtop" class="btn-register" href="https://ims.iiit.ac.in/do.php?5CsxBColMgDf5JndlNYdy8yznDtmOjdoW8bjNVGUdosADxVadag4fKg5uxmRAeptdkppNqtlrhpC3wc1ERENRjhgnfcNo2ddTRXPXr9MuCROsAy49G23yMW5Cyuuc96r7qpRmmi5/AqE81nxjS5ps3dDCICL4Kz5W3MlzC05Dc2bSKLbY8G2mhKwKVrw/c4O">DD / Bankers Cheque / Direct Transfer</a> <a target="frtop" class="btn-register" href="https://ims.iiit.ac.in/do.php?ryviiyTlCZKCAH/RCtLG/JQj7qMveRRW+52JQxfo7HFdqJnLTNX5d9lTQAoMsoFBLLkrVO/cXZyeT0GWqa3b9nJtsMKZnOlPHBM+04GQfeNudn5TYp1V9ZF2Blw77p0F/LXk9TxQcbFKpPSGSAk8c8RvSlgUMpKnqwo4c5SN4+8=">Credit Card / Debit Card / Net Banking</a></td></tr></tbody></table>	</body></html>

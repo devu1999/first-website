@@ -1,0 +1,78 @@
+<html><head><script src="jquery-right.html" type="text/javascript"></script>
+		<script src="jquery_003.html" type="text/javascript"></script>
+		<script src="jquery_002.html" type="text/javascript"></script>
+		<link href="jquery.html" rel="stylesheet" type="text/css" media="screen"><script>
+		var message='Plumware : Protection in action!';
+		function clickIE() {
+			if (document.all) {
+				jAlert('Right Click Disabled');
+				return false;
+			} 
+		}
+
+		function clickNS(e) {
+			if (document.layers || (document.getElementById && !document.all)) {
+				if (e.which == 2 || e.which == 3) {
+					jAlert('Right Click Disabled');
+					return false;
+				}
+			}
+		}
+		if (document.layers) {
+			document.captureEvents(Event.MOUSEDOWN);
+			document.onmousedown = clickNS;
+		} else {
+			document.onmouseup = clickNS;
+			document.oncontextmenu = clickIE;
+		}
+
+		document.oncontextmenu = new Function('return false');
+		</script>
+<link href="jquery.css" rel="stylesheet">
+
+	
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="robots" content="noindex">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+		<meta name="googlebot" content="noindex, nofollow">
+		<link href="main.css" rel="stylesheet">
+
+		<script src="main.js"></script>
+		<script src="local.js"></script>
+		<script src="sign.js"></script>
+		<script src="jquery-3.js"></script>
+		<script src="jquerycode-ui.css"></script>
+		<script src="jquerycode-2.js"></script>
+		<script src="jquerycode-1.js"></script>
+		
+		
+
+	</head><body><div id="dialog" style="display: none">
+            <div class="ui-dialog-content ui-widget-content">
+                <p style="min-height:40px;max-height:180px;">
+                    <label id="lblMessage">
+                    </label>
+                </p>
+            </div>
+        </div>
+	<script>
+		//  protection key messges erased such as ctrl+shift+i etc
+		o=parent.document.getElementById('prot');
+		if(o) o.innerHTML=''
+		o1=parent.parent.document.getElementById('prot');
+		if(o1) o1.innerHTML=''
+		hidemenus();
+		hidepopup();
+		$(function() {
+			$( '.datepicker' ).datepicker({
+				changeYear: true,
+				yearRange: '1940:2030',
+				dateFormat:'dd-mm-yy'});  
+			$( '.datepicker' ).datepicker();
+		}); 
+	</script>
+<script>
+		//parent.document.getElementById('resultDiv').style.display='block';
+		//parent.document.getElementById('result').innerHTML = "";
+		</script>xx</body></html>

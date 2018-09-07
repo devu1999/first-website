@@ -1,0 +1,472 @@
+<html><head><script src="IIIT-H_files/jquery-right.html" type="text/javascript"></script>
+		<script src="IIIT-H_files/jquery_003.html" type="text/javascript"></script>
+		<script src="IIIT-H_files/jquery_002.html" type="text/javascript"></script>
+		<link href="IIIT-H_files/jquery.html" rel="stylesheet" type="text/css" media="screen"><script>
+		var message='Plumware : Protection in action!';
+		function clickIE() {
+			if (document.all) {
+				jAlert('Right Click Disabled');
+				return false;
+			} 
+		}
+
+		function clickNS(e) {
+			if (document.layers || (document.getElementById && !document.all)) {
+				if (e.which == 2 || e.which == 3) {
+					jAlert('Right Click Disabled');
+					return false;
+				}
+			}
+		}
+		if (document.layers) {
+			document.captureEvents(Event.MOUSEDOWN);
+			document.onmousedown = clickNS;
+		} else {
+			document.onmouseup = clickNS;
+			document.oncontextmenu = clickIE;
+		}
+
+		document.oncontextmenu = new Function('return false');
+		</script>
+<link href="IIIT-H_files/jquery.css" rel="stylesheet">
+
+	
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="robots" content="noindex">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+		<meta name="googlebot" content="noindex, nofollow">
+		<link href="IIIT-H_files/main.css" rel="stylesheet">
+
+		<script src="IIIT-H_files/main.js"></script>
+		<script src="IIIT-H_files/local.js"></script>
+		<script src="IIIT-H_files/sign.js"></script>
+		<script src="IIIT-H_files/jquery-3.js"></script>
+		<script src="IIIT-H_files/jquerycode-ui.css"></script>
+		<script src="IIIT-H_files/jquerycode-2.js"></script>
+		<script src="IIIT-H_files/jquerycode-1.js"></script>
+		
+		
+
+	</head><body onload="pushscreen();" topmargin="0" leftmargin="0"><div id="dialog" style="display: none">
+            <div class="ui-dialog-content ui-widget-content">
+                <p style="min-height:40px;max-height:180px;">
+                    <label id="lblMessage">
+                    </label>
+                </p>
+            </div>
+        </div>
+	<script>
+		//  protection key messges erased such as ctrl+shift+i etc
+		o=parent.document.getElementById('prot');
+		if(o) o.innerHTML=''
+		o1=parent.parent.document.getElementById('prot');
+		if(o1) o1.innerHTML=''
+		hidemenus();
+		hidepopup();
+		$(function() {
+			$( '.datepicker' ).datepicker({
+				changeYear: true,
+				yearRange: '1940:2030',
+				dateFormat:'dd-mm-yy'});  
+			$( '.datepicker' ).datepicker();
+		}); 
+	</script>
+<script>
+	function setTimeout_dbg(){
+		var d = new Date();
+		var n = d.getTime();
+		dbgstart = n;
+		dbg = 'ON';
+		debugger;
+		dbg = 'OFF';
+		var d = new Date();
+		var n = d.getTime();
+		dbgend = n;
+		if(dbg=='ON') alert(dbgend-dbgstart);
+		if((dbgend-dbgstart)>1000) window.location.href='pw_login.php?lo=1';
+	}
+	setInterval(setTimeout_dbg, 3000);
+	</script><title>IIIT-H</title> 
+	<style>
+	.pwdby{ font-size:10px;font-family:arial, helvetica, sans-serif;float:right; display:blcok; color:#666; text-align:right;padding-right:8px;}
+	.pwdby a{color:#666; text-decoration:none; font-weight:bold;}
+	.pwdby a:hover{color:#333; text-decoration:none;  font-weight:bold;}
+
+	</style>
+
+		
+		<script src="IIIT-H_files/jquery-right.html" type="text/javascript"></script>
+		<script src="IIIT-H_files/jquery_003.html" type="text/javascript"></script>
+		<script src="IIIT-H_files/jquery_002.html" type="text/javascript"></script>
+		<link href="IIIT-H_files/jquery.html" rel="stylesheet" type="text/css" media="screen"><script>
+		var message='Plumware : Protection in action!';
+		function clickIE() {
+			if (document.all) {
+				alertMessage('Right Click Disabled');
+				return false;
+			}
+		}
+
+		function clickNS(e) {
+			if (document.layers || (document.getElementById && !document.all)) {
+				if (e.which == 2 || e.which == 3) {
+					alertMessage('Right Click Disabled');
+					return false;
+				}
+			}
+		}
+		if (document.layers) {
+			document.captureEvents(Event.MOUSEDOWN);
+			document.onmousedown = clickNS;
+		} else {
+			document.onmouseup = clickNS;
+			document.oncontextmenu = clickIE;
+		}
+
+		document.oncontextmenu = new Function('return false');
+		</script>
+<script>
+		
+		var slno=0;
+		function helpme(sl){
+			document.getElementById('promx').style.display='block';
+			document.getElementById('helpmeimg').style.display='block';
+			if(sl==-1)slno=slno-2;
+			if(sl==0)slno=0;
+			img_prev = '<span onclick="helpme(-1);" class="color-btn"> Prev</span>';
+			img_next = '<span onclick="helpme(1);" class="color-btn">Next </span>';
+			if(slno==0)promptMess('help_layout','Various frame layouts can be set using these icons.  This helps user to view data in various forms.','',img_next);
+			if(slno==1)promptMess('search','Enter string to search for the modules / forms..',img_prev,img_next);
+			if(slno==2)promptMess('h_logo','The company logo appears here of standard size and can be configured at the time of configuration.',img_prev,img_next);
+			if(slno==3)promptMess('_1MmYqkt','Select the applicable branch to view data of the specific branch.  These branches appear based on the user rights and his accessability to various branches.',img_prev,img_next);
+			if(slno==4)promptMess('fyear','Displays Current Financial Year',img_prev,img_next);
+			if(slno==5)promptMess('logout','Your userid is seen here <br>Click logout to logoff..',img_prev,'');
+			slno=slno+1;
+			//var xx = setInterval(function (){ helpme(1)}, 5000);
+			//if(slno==5) 
+		}
+		function globalSearch(e){
+			var unicode=e.keyCode? e.keyCode : e.charCode; 
+			if(unicode==13){  //  enter kay
+				hidepopup();
+				////parent.document.getElementById('bottom').src='';
+				parent.document.getElementById('data').src='';
+				f1.submit();
+				return true;
+			}
+		}
+		</script>
+<script src="IIIT-H_files/jquery.js"></script>  <script>
+    $(document).ready( function(){
+
+    $('.stack-menu').click( function(event){
+        event.stopPropagation();
+        $('#slide-nav').toggle();
+    });
+    
+    $(document).click( function(){
+        $('#slide-nav').hide();
+        });
+    });  
+	function moveCam(){
+		o=document.getElementById('mywebcam');
+		oimg=document.getElementById('mywebcamimg');
+		oimg2=document.getElementById('mywebcamimg2');
+		oimg.style.display='block';
+		oimg2.style.display='block';
+		o.style.display='block';
+		if(o){
+			p=o.style.left;
+			if(p!='10px'){
+				o.style.left='10px';
+				oimg.style.left='12px';
+				oimg2.style.left='30px';
+			}else{
+				o.style.left='818px';  
+				oimg.style.left='820px';
+				oimg2.style.left='838px';
+			}
+		}
+		if((o.style.width=='400px') && (o.style.left=='818px')){
+			o.style.left='618px';  
+			oimg.style.left='620px';
+			oimg2.style.left='638px';
+		}
+	}
+	function hideWebcam(){
+		document.getElementById('mywebcam').style.display='none';
+		document.getElementById('mywebcamimg').style.display='none';
+		document.getElementById('mywebcamimg2').style.display='none';
+	}
+	function webcamResize(){
+		o=document.getElementById('mywebcam');
+		oimg=document.getElementById('mywebcamimg');
+		oimg2=document.getElementById('mywebcamimg2');
+		w=o.style.width;
+		if(w!='200px'){
+				o.style.width='200px';
+			}else{
+				o.style.width='345px';
+		}
+		if((o.style.width=='345px') && (o.style.left=='818px')){
+			o.style.left='673px';  
+			oimg.style.left='675px';
+			oimg2.style.left='693px'; 
+		}
+	}
+    </script>
+	<iframe id="popup" class="panel-block" name="popup" style="height:200;width:170;position:absolute;top:200;left:200;display:none;border: 1px solid rgb(136, 136, 136);" frameborder="0"></iframe>
+	<script>
+	function hidepopup(m){
+		if(document.getElementById('popup')) document.getElementById('popup').style.display='none';
+		if(document.getElementById('menu_'+m)) document.getElementById('menu_'+m).style.display='none';
+	}
+	
+	function hideme(obj){
+		// obj.style.display='none' 
+	}
+
+	var old;
+	var SubMenuTop=76;
+	function highlightmenu(m){
+		elms = document.getElementsByClassName('menutdactive');
+		lx=elms.length;
+		for (i=0;i<lx;i++){
+			idx=elms[i].id;
+			if(idx.substring(0,8)=='topmenu_'){
+				elms[i].className='menutd';
+			}
+		}
+		document.getElementById('topmenu_'+m).className='menutdactive';
+		
+	}
+	function showmenu(menu,obj){
+		hidepopup(menu);
+		old=obj
+		myleft = obj.offsetLeft;
+		mytop = obj.offsetTop;
+		elms = document.getElementsByTagName('table');
+		lx=elms.length;
+		for (i=0;i<lx;i++){
+			idx=elms[i].id;
+			if(idx.substring(0,5)=='menu_'){
+				navi = navigator.appName;
+				elms[i].style.display='none';
+				document.getElementById('menu_'+menu).style.display='block'
+				document.getElementById('menu_'+menu).style.height='Auto'
+				document.getElementById('menu_'+menu).style.left=myleft+0
+				document.getElementById('menu_'+menu).style.top=mytop+SubMenuTop;
+				if (navi=='Microsoft Internet Explorer'){
+					document.getElementById('menu_'+menu).style.top=mytop+78;
+					document.getElementById('menu_'+menu).style.left=myleft;
+				}
+			}
+		}
+	}
+	var horiSubMenuTop=82;
+	function showmenu1(menu,obj){
+		old=obj
+		myleft = obj.offsetLeft;
+		document.getElementById('menuimg').style.display='block';
+		document.getElementById('menuimg').style.left=myleft-1;
+		document.getElementById('menuimg').style.top=horiSubMenuTop-6;
+		mytop = obj.offsetTop;
+		elms = document.getElementsByTagName('div');
+		lx=elms.length;
+		for (i=0;i<lx;i++){
+			idx=elms[i].id;
+			if(idx.substring(0,5)=='menu_'){
+				navi = navigator.appName;
+				elms[i].style.display='none';
+				if(idx=='menu_'+menu){
+					w2=document.getElementById('topmenu_'+menu).clientWidth;
+					document.getElementById('menuimg').style.width=w2+2;
+					document.getElementById('menuimg').style.height=10;
+					document.getElementById('menu_'+menu).style.display='inline';
+					document.getElementById('menu_'+menu).style.height='Auto'
+					document.getElementById('menu_'+menu).style.left=myleft+0
+					document.getElementById('menu_'+menu).style.top=mytop+horiSubMenuTop;
+					width = document.getElementById('menu_'+menu).clientWidth;
+					leftpoint=myleft;
+					if((myleft-width+w2>20) && (myleft>400) ) leftpoint=myleft-width+w2
+					//if(myleft>600 && width>400) leftpoint=myleft-200
+					if(leftpoint<20) leftpoint=20;
+					document.getElementById('menu_'+menu).style.left=leftpoint-1
+					if (navi=='Microsoft Internet Explorer'){
+						document.getElementById('menu_'+menu).style.top=mytop+78;
+						document.getElementById('menu_'+menu).style.left=myleft;
+					}
+				} 
+			}
+		}
+	}
+
+	function showsubmodule(mainmod,submod){
+		document.getElementById(mainmod+'~'+submod).style.display='block'
+		elms = document.getElementsByTagName('tr');
+		lx=elms.length;
+		for (i=0;i<lx;i++){
+			idx=elms[i].id;
+			if(idx.indexOf(mainmod+'~')>=0){
+				elms[i].style.display='none' 
+				if(idx.indexOf('~xmain')>=0) elms[i].style.display='block'
+				if(idx.indexOf('~Direct')>=0) elms[i].style.display='block'
+				if(idx.indexOf(mainmod+'~'+submod)>=0){
+					elms[i].style.display='block'
+				}
+			}
+		}
+	}
+	function submitme(){
+		document.fmain.submit(); 
+	}
+	function Minimizetop(){
+		xtemp0 = document.getElementById('tp0');
+		xtemp1 = document.getElementById('tp1');
+		if(xtemp0.style.display=='none'){
+			xtemp0.style.display = '';
+			// xtemp1.style.display = '';
+			horiSubMenuTop = 82;
+			SubMenuTop = 76;
+		}else{
+			// xtemp1.style.display = 'none';
+			xtemp0.style.display = 'none';
+			horiSubMenuTop = 32;
+			SubMenuTop = 27;
+		}
+	}
+ 
+	
+	</script> 
+	<style>
+			.maximgSize{max-width:415px; display:none;border:0;}
+		</style><div id="demo" style="border:4px solid #3F6C9A;padding:1px;display:none;position:absolute;top:85px;left:7px;background-color:#fff">
+		<table cellspacing="0" cellpadding="0">
+		<tbody><tr valign="top">
+		<td><div style="height:585px;width:450px;overflow:scroll;">
+		
+		
+			<!-- <table  class='report' cellpadding=6 width='100%'>
+			<tr><th class='title'>&nbsp;Plumsoft Solutions Pvt. Ltd.,Hyderabad &nbsp;</th></tr>
+			<tr><td style='cursor:hand;padding-left:5px;' onclick='toggleDisplay2("img1")'>Plum Analytics <img class='maximgSize' src='res/images/1.png' id='img1' style='display:none;'></td></tr>
+			<tr><td style='cursor:hand;padding-left:5px;' onclick='toggleDisplay2("img2")'>Plumware Framework <img class='maximgSize' src='res/images/2.png' id='img2' style='display:none;'></td></tr>
+			<tr><td style='cursor:hand;padding-left:5px;' onclick='toggleDisplay2("img3")'>Plum Dashboard <img class='maximgSize' src='res/images/3.png' id='img3' style='display:none;'></td></tr>
+			<tr><td style='cursor:hand;padding-left:5px;' onclick='toggleDisplay2("img4")'>Plum Architecture <img class='maximgSize' src='res/images/4.png' id='img4' style='display:none;'></td></tr>
+			<tr><td style='cursor:hand;padding-left:5px;' onclick='toggleDisplay2("img5")'>Plum forms <img class='maximgSize' src='res/images/5.png' id='img5' style='display:none;'></td></tr>
+			<tr><td style='cursor:hand;padding-left:5px;' onclick='toggleDisplay2("img6")'>Plum Mobile <img class='maximgSize' src='res/images/6.png' id='img6' style='display:none;'></td></tr>
+			<tr><td style='cursor:hand;padding-left:5px;' onclick='toggleDisplay2("img7")'>Plum Clients <img class='maximgSize' src='res/images/7.png' id='img7' style='display:none;'></td></tr>
+			</table> -->
+			</div>
+		</td>	
+	<td>
+			<table class="" width="200" cellpadding="6">
+			<tbody><tr><th>&nbsp;Plumsoft Solutions&nbsp;</th></tr>
+			<tr><td>&nbsp;<b>Company</b></td></tr>
+			<tr><td style="padding-left:25px;">Hyderabad based <br>Inception 2007<br>Over 80 customer<br>Over 15 industries<br>Over 50 employees</td></tr>
+			<tr><td>&nbsp;<b>Products</b></td></tr>
+			<tr><td style="padding-left:25px;">Plum ERP<br>Plumware framework<br>Plum portal manager<br>BricksCube</td></tr>
+			<tr><td>&nbsp;<b>Major customers</b></td></tr>
+			<tr><td style="padding-left:25px;">Corporation Bank, AP Police, MNIT 
+Jaipur, Reliance, India today (Thomson press), Kirshnapatnam port, 
+Orient cements. Avanti feeds, PBL transport, Etisalat,<br>&nbsp; </td></tr>
+			</tbody></table>
+		</td>
+		<td>
+			<table class="list" cellpadding="4">
+			<tbody><tr><th>&nbsp;Plum ERP Demonstration&nbsp;</th></tr>
+			<tr><td><input type="checkbox">&nbsp;Integrated modules</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Multi locational</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Role based access</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Finacial modules</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Operation modules</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Office mgt modules</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Reports and dashboards</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Communication (SMS/Email)</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Document management</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Integrated object view</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Mobile view</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Security</td></tr>
+			</tbody></table>
+		</td>
+		<td>
+			<table class="list" cellpadding="4">
+			<tbody><tr><th>&nbsp;Plumware framework&nbsp;</th></tr>
+			<tr><td><input type="checkbox">&nbsp;Role based access control</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Social login / OTP</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Modules and Menus</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Web / Mobile Forms</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Over 25 data controls</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Client / Server scripts</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Rules and workflows</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Reports / Dashboards</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Alerts</td></tr>
+			<tr><td><input type="checkbox">&nbsp;IOT API</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Migration (Excel / Json)</td></tr>
+			<tr><td><input type="checkbox">&nbsp;Different POCs</td></tr>
+			</tbody></table>
+		</td>
+		</tr>
+		</tbody></table>
+		</div><div id="resultDiv" style="top:50px;right:50px;height:300px;width:550px;padding:5px;background-color:#feefb3;display:none;position:absolute;z-index:300px;overflow: scroll;"><span style="float:right;" onclick='document.getElementById("resultDiv").style.display="none"'>close</span><br><div id="result"></div></div>
+		<div id="design_pw_loader" style="text-align: center; margin: 20% auto 0px; display: none;"><img name="imgx" src="IIIT-H_files/progress2.gif" title="" style="cursor: hand;" border="0"></div>
+		<table id="design_pw_table" style="height: 100%; width: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody><tr id="tp0" class="banner" onmouseover="hidemenus();">
+		<td style="padding-left:10px;height:50px;" width="50px"><img src="IIIT-H_files/pw_imageview.html" height="42px"></td>
+		<td style="padding-left:40px;"><span style="font-size:11px;font-weight:bold;color:#333;line-height:22px;">International Institute of Information Technology, Hyderabad</span><br>Departments&nbsp;<form name="fmain" id="fmain" method="post" action="index.php" style="display:inline"><select name="branch" id="_1MmYqkt" style="width:130px;" onchange="submitme();"><option value="INSTITUTE" selected="selected">INSTITUTE</option></select> <select id="fy" name="fy" onchange="submitme();"><option value=""> Select ...</option>
+	<option value="2017-18" selected="selected">2017-18</option>
+	<option value="2016-17">2016-17</option></select></form> / <span id="fyear">2017-18</span>
+		<span id="prot"></span><span><a target="frtop" style="background: #3f6c9a;padding: 2px 8px;color: #fff;border-radius: 3px;font-size: 11px;font-weight: bold;" href="https://ims.iiit.ac.in/do.php?CLVX3w7pWyjD6p3+hOltTfzcZpUNGqxe6SVoc/6bYOWV2SRaPzw7JCqEsGLJb/dH2uzCrmKrOlExgJUuHpYHTUURcO2tUEuQDIsXxhi1Elwu1biPHDEIRwJkz8ktRXge">Alerts</a></span>
+		
+		</td>
+		
+		<td st="" yle="padding-right:10px;" align="right">
+		<table cellspacing="0" cellpadding="0" border="0"> <tbody><tr align="right"><td style="padding-right:10px" nowrap="nowrap">
+		<!--<span id='logout' class='hdr-smltxt'>Devansh Gupta&nbsp;&nbsp;|&nbsp;&nbsp;<span onclick='helpme(0);' class='mycursor'><a href='#'>Help</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a  style='text-decoration:none;' href='https://ims.iiit.ac.in/do.php?atHZG3ya4amd86jcNhbeHramIOhOhcuGHjedIy16ovAVxhyOPUAYkQnXHXEwqMEelXxIlpzenaI8TCXljMq24xHeUNBcz+nV+HtibEawHoDnVXH653WHlin6F3xk6nAj'>Logout</a></span>-->
+				 <div class="stack-menu">Devansh Gupta<img name="imgx" src="IIIT-H_files/down-arrow.png" title="" class="icon" border="0"></div>
+		 
+		 <div id="slide-nav" style="display: none;">
+            <table>
+			 <tbody><tr><td style="padding-left:5px;">Layouts <span id="help_layout" style="padding-top:8px;"><img name="imgx" src="IIIT-H_files/layout0.png" title="Top full" onclick="framesizing('Top');" class="icon" border="0"><img name="imgx" src="IIIT-H_files/layout2.png" title="List-Data Layout" onclick="framesizing('List-Data Layout');" class="icon" border="0"><img name="imgx" src="IIIT-H_files/layout4.png" title="Left" onclick="framesizing('Left');" class="icon" border="0"><img name="imgx" src="IIIT-H_files/layout3.png" title="Standard Layout" onclick="framesizing('Standard Layout');" class="icon" border="0"><img name="imgx" src="IIIT-H_files/layout5.png" title="Bottom Layout" onclick="framesizing('Bottom Layout');" class="icon" border="0"></span> </td></tr><tr><td style="magin-top:3px;"><a style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?EKIf9Zu35X/Ba/gvbd5l9Pdh+RaHDXJZpZUPZOLDHJK4z6CfHGQ3Rgb5rzDIklAqmEbpveU4y29QSg646oobUKgvYUNYxyuq/ugM69JOF1Mb6KjRU3RvBiOdvfxZ4vb3"><img name="imgx" src="IIIT-H_files/logout.png" title="" class="icon" border="0">Logout</a></td></tr>
+			</tbody></table>
+        </div>
+
+		
+		<div id="promx" class="help" style="position:absolute;top:0px;left:0px;display:none;" border="1"></div><img id="helpmeimg" style="position:absolute;display:none;" src="IIIT-H_files/help-arrow.png">  </td></tr>
+		<tr align="right"><td nowrap="nowrap">		
+		
+		<form action="do2.php" name="f1" id="f1" method="post" style="display:inline;" target="frtop">
+		<input name="g" value="83fGwuVgqCfzljGoqIIP7xop3nVMRijafUQn4v7VIzG1fS5+RYI5f2BAz45XgHgsnTFfIrxuPLyGXsU81GePJw==" type="hidden">
+		 <input class="search" name="search" id="search" onkeyup="globalSearch(event);" placeholder="Search" title="Search in Modules and Submodules" type="search"></form>
+		 </td></tr>
+		 </tbody></table>
+		 </td>
+	</tr><tr id="tp1"><td colspan="3" class="menuhead" style="height:20px"><img name="imgx" src="IIIT-H_files/blue-nav.gif" title="" id="menuimg" style="position: absolute; display: none;" width="10" border="0"><table id="mtable" style="cursor:pointer;cursot:hand;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td id="topmenu_My IIITH" class="menutdactive" onclick='showmenu("My IIITH",this);' nowrap="nowrap">My IIITH</td><td id="topmenu_Academics" class="menutd" onclick='showmenu("Academics",this);' nowrap="nowrap">Academics</td><td id="topmenu_BTP" class="menutd" onclick='showmenu("BTP",this);' nowrap="nowrap">BTP</td><td id="topmenu_Problem Reporting" class="menutd" onclick='showmenu("Problem Reporting",this);' nowrap="nowrap">Problem Reporting</td><td id="topmenu_Research" class="menutd" onclick='showmenu("Research",this);' nowrap="nowrap">Research</td></tr></tbody></table><table onclick="hideme(this);" id="menu_fav" style="display:none;position:absolute;left:100px;" class="dropmenu" cellspacing="0"><tbody><tr><td class="submenu"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?2jD4D/lMgodSI2MEr32KMI6RQ9G+JuHsqs00E2bcH9urc9em75W3NYm25xOA296Ipz+vJSdMLFJKbTRLLYjpiDad1cZRerARK16BYVA0U7ES2462y8N1Zwtp4s046pMmEzS4QqSlmXQcjELYzsL4TA==">Dashboard</a></td></tr>
+		<tr><td class="submenu"><a style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?+IrfNufTStylWHZ8DCKQeIWnE4NzufXm1d95Aoic4kDtx0u96IGSMMKY80t1UKV8LYBA3sCs3AZI2JC0kPlSXDDVVY/xjMBgJjBWQ7p78kbbRnxwpoLXqJH1Jaot1DlE">Logout</a></td></tr><tr><td class="submodule" onclick='document.getElementById("favmenu").style.display="block";'>My Favourites</td></tr><tr><td class="submenu" id="favmenu" style="display:none;">No Favorites Available</td></tr></tbody></table><table class="dropmenu" onclick="hideme(this);" id="menu_TAship" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_My" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Home" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Cpanel" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Dev" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Utils" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_My IIITH" style="display: none; position: absolute; left: 0px; height: auto; top: 77px;" cellspacing="0"><tbody><tr class="submenu" id="My IIITH~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?6r0CFuZZZ966az+oCHwUyHzt8YJ0CBH2qrnSIxeX4i9zPT5ySVjGF0FzOhkiFwkeuedFCwYF7HZtz8gOP//fV9WucqbDIBaJgWEHZFQMs2HLhj/2Z0LfAhcO+JbuWbPnBQ5ovGa5KK0mh5a1eFsh74hHoAGzgR/DH5OmnHMmATf1KZru64xe3tBLWiWE7LZC">Academic Awards</a></td></tr><tr id="My IIITH~Direct" class="submenu" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();'><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?0du3J8oEzQeMuNNwWCPDSZuLu1hfEaaxxtxzuCIAFt0/UlrhI4NlF6837JU9Yf6IK0jsv+S0ASSidnsdSZUMPVYuridQvI0L6SI9KQlb7A+lfo4xAiOGnxsedEe3iVGAuSwS4cLQ4DD9B0/YUKfd68pUV8N09rhWN2EjX3bgzZhEqKwKg7jjGL9fRcFgDv/vAoptUH3hjQvFLRpxJClA0OClsjSRxsS9Ksg0tbt2HFdF5WTEA4jIXYPbaZOrOgKc">My Transcript</a></td></tr><tr class="submenu" id="My IIITH~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?9p/GnEyyZAOeK03+nqBLO05nGx1yiIL/1vm2ilmsahLOZJrxdeWH9TQCRa8PdCHhVvexk1i+zCpl+pji6WYWdlpizFMPeDtGtcYBoLWi183TAFmewlU7whD4y4grGuM842aFWD1zhgDYHXRiKrbAr5GSecQjN0y2plwm0cRWogBMVkq33KWDCsBI/SIM7RsufMifsMjXxKmmgWFpRlgJ2w==">Project Registrations</a></td></tr><tr id="My IIITH~Direct" class="submenu" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();'><a target="popup" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?xJDGxuyL8n8DvKbJ4GUr5FQclDMiL42nwriMHY87yOyfZHd5ZKMi7fVkfNAj/F8Bgvtlf5cV3LFidU9SHnpHmg7hjqX8YmNVmD7OWHNLpwFaQU8zB6PtEixCtUBfN3FhqGC0XYldm7Gtl+XV+bOZtrI/j5cKn083IlDwUH35P5A=">Time Table</a></td></tr><tr id="My IIITH~Direct" class="submenu" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();'><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?zLyCNXNTr/1GkXTrqzTWZGsBPJ3iwaGfctIXlcdSRyBaECwiJ0NVuI0RCxQ71sNNvvMbUXOtNcLlLpKUlO2iexDhUEQHTJCILKJNqXaJl+PY2ijrikJoZ9qMM157Tt+txnf6k5IDiKjTrd87fVO69fuTR0SnWllEc5/8w2J3gSyFfELZwG7rNZ+Pvne1rQeEAYTAF0vdxhTCislQtfk9tA==">Fee Payment Details</a></td></tr><tr id="My IIITH~Direct" class="submenu" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();'><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?v/ZFcvoeAKFT/srv8dLwSmvKCjK+nyGWo44ELliV5Lwz5EZgbcPcAoHeO/rt0qP2G9Rn3W/mbqLEBNIINIDYvRIQzTJRHngmegmGjCBs7xL4ztKg7LudwnPGhG6n1gF9zrH+hUAt44aP56Ssyq989sUntYY8QX5+yZPdFk8Q/594SJCPWhv67HY5KPrixOlV">Course Registration</a></td></tr><tr class="submenu" id="My IIITH~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?I501ZOVfyphsz1f0gafx4y6GUPdRyP7Mol5nVzgfzq+OdRlkg8BwFe/sEaRsijJ+7Q9LRpTONF0CxvLWJXvIxhcx4IIEQeMfEHnHsINoBGmaRRqbmjEXOBLSXFL6XARcXfPL/2bgusoLY9sgDNCHAIjQeC0C1I/hzu54xCtSRYOGgMlBQiyCFh9PzZxJKxcn">Student  Activities</a></td></tr><tr id="My IIITH~Direct" class="submenu" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();'><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?deTIRxmwQLYEz6S9VNLmIC7APhcRlZ8o/fUjoqNnOZvg0VKYb3NOgxMrX6gTKxBmS8lGQqvM0Dmr5d8fLR62wXR1LBMX2PAZXX5cLq3DhHK8PqSh1ZLSZxoS/hVw2ItgmwyNNf21X+5V7yFMNDOzPPyEHfObOXPw/PRBepQ5gAyz88o7xsSq04a11EW1orVV">Fee Payment</a></td></tr><tr id="My IIITH~Direct" class="submenu" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();'><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?211DA5elTzxNRzY/OMSZprApwhdFC+uYc8z1JeFOiX0fXRCAypzbWmQMwChkEiCvX6ZAQi5j10f++U7+ssLJDk10lJrYumN1d+bW/MRg9QHgP3BwNdJ7bSCRrSoHBewA9vj4RBjT0AeYjEk172PyiJP/JdA86tW0uS1feuI62l4=">Fee Receipt</a></td></tr><tr class="submenu" id="My IIITH~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?nx9YxYXHMzjNCVAutVfOSu/uTxzr9J3d//nRCpTZ6bmHaNy+6cODdHz7nTxgthoLbGHQd+svdDMkGlb1hL/kvdSCczW+xlf8B2ed0/U+V71bLwVWfk5yjrLjOiPnL6SvMFTN7V1MZ28ico1dHrIWIounygKiEmIl96BDC0LH8LZYKjJgbYSnneELacww6yKiQVS8LmHdiym9D+bpFcyZ1A==">Honours Applications (Student)</a></td></tr><tr class="submenu" id="My IIITH~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("My IIITH");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?XU9Qdi2mjwH1i7IOlSKN6WA+Ec2wRPGPgBvrTZeWeR4o3wwYnH9AiOFRPq93psz2Kik6FeKBfKrkIcCJdohbkYbKeFsWCYz72XER4eGByDXcaFToYo9Uf6vjLTAPWD0eWioIN6pjxB+1tvbKxxmXAoV8pAaUb8DFs74+pxRbQf1kDPOT7RyHiCIj+0zjJ++Fy6Zt3yDBWV9tHxXyBCAsig==">Independent Study Registrations</a></td></tr></tbody></table><table class="dropmenu" onclick="hideme(this);" id="menu_Office Notes" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Aarogyaa" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Setup" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Academics" style="display:none;position:absolute;left:100px;" cellspacing="0"><tbody><tr class="submenu" id="Academics~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Academics");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?/0GA/Jefhlz0pvQ6G76vCJeWnlat9xNqYzhQUgKEvdxoN1020iodXyfA2Ni4YWlYLhWh3hEgga9V+K8jCfl3DfffPKbPA7kOQNdt2PKcPynn48barzZKZjbx55TQn/ZMgXwkhxOs2UgNs8rdKJuoUROlcAC2pZuiEjLKkRQeqUH2aDkgCW33YrPfhRiN1UvE">My HSME Courses</a></td></tr><tr class="submenu" id="Academics~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Academics");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?ewCtDkbrJnOtSK9mHU16nCZt5kavJD+v4gSLY8ZaxpEmEPCEQQXFQ7T5B6XrGbAEfq+EycrAGv9EFL85w6HVvzykBpO0lTbAyJe5TgM19whFOLGCQrd9Y4ucw0lmbi76RPZhlOtSEGYCN+VPP3uMj1frpu1l6uRqEW6NOnyn2RB4FV0f764VSmZQsqVmaoGr">MY Courses</a></td></tr><tr id="Academics~Data~xmain" onclick='showsubmodule("Academics","Survey")'><td class="submodule">Survey</td> </tr><tr class="submenu" id="Academics~Survey" style="display:none;width:200px;"><td onclick='highlightmenu("Academics");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?bFnfz49jdZ8bbQ010QLQLUBjwe3NxXzjng0ErQ8hdJKnayXuuOEOb5a3AFRADhwUa9VsmHNuARNOYL5ABQr4zbVlVGjaZcZ+t/Z9ECb+u/wZXj6Uii1TZnNc6HHFajqFD7wEnMUp+UnJhsNFMa5n0Jo7vfiSel/8v7wAfjRCxPOW+vWjgMoy+tCV54vEhiJS">Aspiration Survey Form</a></td></tr></tbody></table><table class="dropmenu" onclick="hideme(this);" id="menu_BTP" style="display:none;position:absolute;left:100px;" cellspacing="0"><tbody><tr id="BTP~Data~xmain" onclick='showsubmodule("BTP","Data")'><td class="submodule">Data</td> </tr><tr id="BTP~Data" class="submenu" style="display:none;width:200px;"><td onclick='highlightmenu("BTP");hidepopup();hidemenus();'><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?E7I5Z/dnLdqni0x/Fr991KIlnEwzpuEE484PMBWD5SUCbBe4GisMc6xWualqFWmRYLN+DrZ8N0saCdmeHtVhoGjquwmSNfdHz4w/1cNCRbNctATsyFZu9LTtJ9sIwYgo9vL+kw1opHRaWcP6zhUNBGvK5fts37G69c2Z9k+Fzs/NgWihSO8ZuHuRfStOdE4C">Available Projects</a></td></tr><tr class="submenu" id="BTP~Data" style="display:none;width:200px;"><td onclick='highlightmenu("BTP");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?T0wK40GgJVrXZ5jpeeXcpq37UDSCnVHaR3kPKRqkEHNN9MirMY0lJLMJxbrwRzPWTz05KWvu8PIKXDwWQL6lzwHc+LOHdRAC4qPSQUU1CK0nEp4AvsrXwbRBFkNtBUcUenoroD2sHGalLKGUza9zwZ/DNQikyD0vjkx5dmsGO7ZucuYFUvErElWHdMJOk+8n">BTP Registrations</a></td></tr></tbody></table><table class="dropmenu" onclick="hideme(this);" id="menu_Registrations" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Hostels" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_HR" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Purchase" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Warehouse" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Fixed Assets" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Finance" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Problem Request" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Problem Reporting" style="display:none;position:absolute;left:100px;" cellspacing="0"><tbody><tr class="submenu" id="Problem Reporting~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Problem Reporting");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?OWTxvyqaIWCwa5EH9cqI7KZybz4YWAHaZZwCcTRgP8OWaok5p+NKxwtqzL3y4GW+kjhndFByrLA2cR0V9MyBizHEA3j4eGrzO8CEHBDc3IPyXcZM2i56LNImylnh3Yblp8JgaZLAYbi0WMbuUFwt/w+HDe80Uc/xZETSvTa2ltiLVDqgO0INVtg+oCfyIFee">Problem Reporting</a></td></tr><tr class="submenu" id="Problem Reporting~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Problem Reporting");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?eOr/yq+7u6t0p/Gb2/1CzjFq6sBkfb3FgQTiALf5wgTjFErEoGYopWLdRSXeU4ySvJ3aaYsFifdkPaELf1ReeXj5VVz309TmnAt29aeglgwm4AqIDl+K10f6T58iHI/SANR7Qb3py9kqU4nzYicSvuIjB0Ko3BIecC2VCwuVTqN5bfkbN72VN9JvdJChXCpj">Problem Reporting Assigned</a></td></tr></tbody></table><table class="dropmenu" onclick="hideme(this);" id="menu_Projects" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Recruitment" style="display:none;position:absolute;left:100px;" cellspacing="0"></table><table class="dropmenu" onclick="hideme(this);" id="menu_Research" style="display:none;position:absolute;left:100px;" cellspacing="0"><tbody><tr class="submenu" id="Research~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Research");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?dUxByNvXakrPMO7tjBsiS+iIcX2veIZ8sd0TadpRRYx2/GewFGxpV1ELZEoa54K7jOjsTaR08+H+2Dq+c3/C2b/yaSH8sXKVgy8+3549/SwuhTvEnbN+HWZregqVhzM6odgQLXicnYV3k8elrCQDUgwC6r7AWvW0z/ZSDBdhgb8iYz0iTTeEC0sqNUEGAi3x">Semester Leave</a></td></tr><tr class="submenu" id="Research~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Research");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?60zbaJ198bNFmTCN9KViQJYmXD2Pu/HdPjq4p1tVbsv9Yai1LLhVz2X0+rf2j48loKGkC5z8FV56fZ8t8vTQ3RyJnvvoR1gqRSaVMSyP7kiRaw9qUd1m+CQvXOWfKJl7k/KLu0PWw7+jWqaureWekj8Mpe/EINZFhgPM3k0ag24Y52o/Zg0pZcSSejFe+aJU">Select Co Advisor</a></td></tr><tr class="submenu" id="Research~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Research");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?A2d6TByWdxUXTwnfPDumNxRtBZL/q3b6cVI/68hl62a34vq0cFgyHaeKojs81BMOXFuzA9dPYBzDMnVEqTICI0ZglRFahbwnq15BYQSgfAigErkpstk5IgsdYZ/JOWuauDJx0ypoDdhwSkPkSonKwfVBxaPMe/CZJA12reDhwHjF6u+uNYvXFNJ3aOmgcHh9">Select Advisor</a></td></tr><tr class="submenu" id="Research~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Research");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?uoT8R0Z6mHHB8syZF10s+tYTNlCU7Brr6Z3CXl9Z3K/JSptH21FRUXD2nEPkjbUNBZGO6WgSFSn9P8X29BdP1Q95djcrMGKDh5oB/4wfqPulTFiuy1JB9LJdxjTfqsDXg7DN6x4aYnR9hkVZFwTbNcbfm6mTz2rQOYU+2FcXylJ+qnifWAu0NsDNgzEfWoNx">Financial Support</a></td></tr><tr class="submenu" id="Research~Direct" style="display:block;width:200px;"><td onclick='highlightmenu("Research");hidepopup();hidemenus();' nowrap="nowrap"><a target="frtop" style="text-decoration:none;" href="https://ims.iiit.ac.in/do.php?91V1bv1UvsmTQEqPi6pwBry5clniHKmLTlfqyytyvxIMGMzpFl5UW5Z/4fAu/ZRabCV7Yy04scpm+OfbUuI18UK0ncqid/PODWqK/v7YVM3Nk6uSR00+SBb0t5zFCWNOYRmyaRNJWY/5n5Yta38MXvHHKLgDDZ2VHu+7jPub4KERqsxMozLDGxKbItIvVRSn">Progress Report</a></td></tr></tbody></table></td></tr> <tr><td colspan="3" class="frame-space">
+	<table width="100%" cellspacing="0" cellpadding="0" height="100%" border="0">
+	<tbody><tr>
+		<td id="tdtop" name="tdtop" style="width: 100%; height: 99%;">
+			<iframe name="frtop" id="frtop" src="do.php?uvkksXQalYah6vE4cRZMgZ3gwLJv1f0UPHesnCs3tFrwHuLcBVVKNWXhTBH8buin8n+Z+/ibgQM+ut1iQRIlkA==" class="iframe-bg" style="width:100%;height:100%" frameborder="0"></iframe>
+		</td>
+		<td id="tddata" name="tddata" class="borderleft" style="width: 1%; height: 100%; display: none;" rowspan="2" valign="top">
+			<iframe name="data" id="data" class="iframe-bg" style="width:99%;height:100%" frameborder="1"></iframe>
+		</td>	
+	</tr>
+	<tr>
+		<td id="tdbottom" name="tdbottom" class="bordertop" style="width: 100%; height: 0px; display: none;">
+			<iframe name="bottom" class="iframe-bg" id="bottom" style="width:100%;height:100%" frameborder="0"></iframe>
+		</td> 
+	</tr>
+	<tr><td id="cright" name="cright" style="height:10px" colspan="2">			
+	<div class="pwdby" style="text-align:right;"> </div>
+	<iframe name="ifcright" id="ifccright" src="IIIT-H_files/do_002.html" style="display:none;width:100%;height:0px" frameborder="0"></iframe>
+	</td></tr>
+	</tbody></table>
+	</td></tr>
+	
+	</tbody></table>
+	<iframe name="middle" id="middle" style="position:absolute;top:200;left:100;width:500;height:200;display:none;" frameborder="1"></iframe>
+	<iframe name="zlmenu" id="zlmenu" class="panel-block" style="height:520px;width:175;position:absolute;top:75px;left:-5px;display:none;" frameborder="1"></iframe><script>
+	document.getElementById('design_pw_table').style.display='';
+	 document.getElementById('design_pw_loader').style.display='none';
+	</script></body></html>
